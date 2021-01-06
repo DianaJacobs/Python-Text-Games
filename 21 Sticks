@@ -1,0 +1,34 @@
+# https://repl.it/@Cupcake123D/21-Sticks#main.py
+# On Repl.it
+
+
+print("In this game, there are 21 sticks lying in a pile. \n\n PLayers take turns taking 1, 2 or 3 sticks \n\n The last person to take a sticks wins. \n\n")
+
+step = 1
+sticks = 21
+print("There are" ,sticks, "sticks in the pile")
+
+
+while sticks != 0:
+  print("Round", step)
+  user_sticks = int(input("Enter the number of sticks you take: "))
+  sticks -= user_sticks 
+  print("You took", user_sticks," sticks")
+  print("There are" ,sticks, "sticks left")
+
+  computer_sticks = sticks % 4
+  if 0 == computer_sticks % 4:
+    computer_sticks = 2
+  sticks -= computer_sticks
+
+  if sticks <= 0: 
+    "You won!"
+    break
+
+  print("The computer chose" ,computer_sticks, "sticks")
+  print("There are" ,sticks, "sticks left")
+  print("----------------------")
+
+  step += 1
+
+
